@@ -2,6 +2,7 @@ import requests
 import pandas as pd
 from datetime import datetime
 import os
+import pytz
 
 # --- Step 1: Define Universal Orlando parks explicitly ---
 PARK_IDS = {
@@ -10,6 +11,9 @@ PARK_IDS = {
     "Volcano Bay": 67,
     "Epic Universe": 334
 }
+
+# Orlando timezone
+tz = pytz.timezone("America/New_York")
 
 # Orlando coordinates
 lat, lon = 28.4743, -81.4678
@@ -30,19 +34,23 @@ weather_data = requests.get(weather_url).json()
 current_weather = weather_data["current_weather"]
 temp_f = current_weather["temperature"]
 wind = current_weather["windspeed"]
-weather_time = current_weather["time"]
+weather_time = current_weather["time"]  # e.g. "2025-08-20T22:10"
 
-# Rain probability for current hour
+# Rain probability for the current hour
 hourly_time = weather_data["hourly"]["time"]
 hourly_precip = weather_data["hourly"]["precipitation_probability"]
 
+# Round down to the nearest hour for matching
+current_hour = datetime.fromisoformat(weather_time).replace(minute=0, second=0, microsecond=0)
 rain_prob = None
-if weather_time in hourly_time:
-    idx = hourly_time.index(weather_time)
-    rain_prob = hourly_precip[idx]
+for i, t in enumerate(hourly_time):
+    if datetime.fromisoformat(t) == current_hour:
+        rain_prob = hourly_precip[i]
+        break
 
 # --- Step 3: Collect ride wait times ---
 records = []
+timestamp = datetime.now(tz).strftime("%Y-%m-%d %H:%M:%S")
 
 for park_name, park_id in PARK_IDS.items():
     url = f"https://queue-times.com/parks/{park_id}/queue_times.json"
@@ -52,7 +60,7 @@ for park_name, park_id in PARK_IDS.items():
         for land in data["lands"]:
             for ride in land.get("rides", []):
                 records.append({
-                    "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                    "timestamp": timestamp,
                     "park_id": park_id,
                     "park": park_name,
                     "ride": ride["name"],
@@ -66,7 +74,7 @@ for park_name, park_id in PARK_IDS.items():
     elif "rides" in data:  # fallback if flat
         for ride in data["rides"]:
             records.append({
-                "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                "timestamp": timestamp,
                 "park_id": park_id,
                 "park": park_name,
                 "ride": ride["name"],
@@ -87,4 +95,4 @@ if os.path.exists(csv_path):
 else:
     df.to_csv(csv_path, index=False)
 
-print(f"✅ Logged {len(df)} rides at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} into {csv_path}")
+print(f"✅ Logged {len(df)} rides at {timestamp} into {csv_path}")
