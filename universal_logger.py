@@ -3,17 +3,18 @@ import pandas as pd
 from datetime import datetime
 import os
 
-# Park IDs for Universal Orlando (from Queue-Times API)
+# --- Step 1: Define Universal Orlando parks explicitly ---
 PARK_IDS = {
-    "Epic Universe": 68,
-    "Islands of Adventure": 66,
-    "Universal Studios Florida": 65
+    "Universal Studios Florida": 65,
+    "Islands of Adventure": 64,
+    "Volcano Bay": 67,
+    "Epic Universe": 334
 }
 
 # Orlando coordinates
 lat, lon = 28.4743, -81.4678
 
-# Get weather: current + hourly rain probability (temp in °F)
+# --- Step 2: Get weather data (temp in °F, wind in mph, rain probability) ---
 weather_url = (
     f"https://api.open-meteo.com/v1/forecast?"
     f"latitude={lat}&longitude={lon}"
@@ -40,17 +41,33 @@ if weather_time in hourly_time:
     idx = hourly_time.index(weather_time)
     rain_prob = hourly_precip[idx]
 
+# --- Step 3: Collect ride wait times ---
 records = []
 
-# Fetch rides wait times
 for park_name, park_id in PARK_IDS.items():
     url = f"https://queue-times.com/parks/{park_id}/queue_times.json"
     data = requests.get(url).json()
 
-    for land in data["lands"]:
-        for ride in land["rides"]:
+    if "lands" in data:  # normal case
+        for land in data["lands"]:
+            for ride in land.get("rides", []):
+                records.append({
+                    "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                    "park_id": park_id,
+                    "park": park_name,
+                    "ride": ride["name"],
+                    "wait_time": ride["wait_time"],
+                    "is_open": ride["is_open"],
+                    "temp_f": temp_f,
+                    "wind_speed_mph": wind,
+                    "rain_probability": rain_prob,
+                    "weather_time": weather_time
+                })
+    elif "rides" in data:  # fallback if flat
+        for ride in data["rides"]:
             records.append({
                 "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                "park_id": park_id,
                 "park": park_name,
                 "ride": ride["name"],
                 "wait_time": ride["wait_time"],
@@ -61,17 +78,10 @@ for park_name, park_id in PARK_IDS.items():
                 "weather_time": weather_time
             })
 
-# Create DataFrame
+# --- Step 4: Save to one master CSV ---
 df = pd.DataFrame(records)
+csv_path = "universal_wait_times.csv"
 
-# Ensure data folder exists
-os.makedirs("data", exist_ok=True)
-
-# Save to daily CSV inside /data/
-date_str = datetime.now().strftime("%Y-%m-%d")
-csv_path = f"data/{date_str}.csv"
-
-# Append mode: if file exists, add rows; else create new
 if os.path.exists(csv_path):
     df.to_csv(csv_path, mode="a", header=False, index=False)
 else:
