@@ -3,7 +3,10 @@ name: Universal Wait Logger
 on:
   schedule:
     - cron: "*/10 * * * *"   # every 10 minutes
-  workflow_dispatch:         # allows manual run
+  workflow_dispatch:
+
+permissions:
+  contents: write   # 👈 allow pushing to repo
 
 jobs:
   run-script:
@@ -12,6 +15,8 @@ jobs:
     steps:
     - name: Checkout repo
       uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}   # 👈 use GitHub’s built-in token
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -29,5 +34,5 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git add universal_wait_times.csv
-        git commit -m "Update wait times"
+        git commit -m "Update wait times" || echo "No changes to commit"
         git push
