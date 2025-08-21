@@ -2,7 +2,7 @@ name: Universal Wait Logger
 
 on:
   schedule:
-    - cron: "*/10 * * * *"   # every 10 minutes
+    - cron: "*/10 * * * *"   # every 10 minutes (UTC)
   workflow_dispatch:         # allow manual trigger from GitHub
 
 permissions:
@@ -25,6 +25,13 @@ jobs:
 
     - name: Install dependencies
       run: pip install requests pandas
+
+    - name: Print debug info
+      run: |
+        echo "✅ Workflow triggered"
+        echo "Current UTC time: $(date -u)"
+        echo "Current Orlando time: $(TZ=America/New_York date)"
+        echo "Triggered by cron: ${{ github.event.schedule }}"
 
     - name: Run logger
       run: python universal_logger.py
