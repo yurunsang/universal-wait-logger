@@ -892046,3 +892046,75 @@ timestamp,park_id,park,ride,wait_time,is_open,temp_f,wind_speed_mph,rain_probabi
 2026-10-18 16:30:35,334,Epic Universe,Yoshi's Adventure™,45,True,77.0,14.1,1,2026-10-18T20:30
 2026-10-18 16:30:35,334,Epic Universe,Harry Potter and the Battle at the Ministry™,110,True,77.0,14.1,1,2026-10-18T20:30
 2026-10-18 16:30:35,334,Epic Universe,Harry Potter and the Battle at the Ministry™ Single Rider,0,True,77.0,14.1,1,2026-10-18T20:30
+2026-10-18 18:35:32,65,Universal Studios Florida,Trolls Trollercoaster,0,False,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,65,Universal Studios Florida,E.T. Adventure,0,False,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,65,Universal Studios Florida,Despicable Me Minion Mayhem™,0,False,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,65,Universal Studios Florida,Illumination's Villain-Con Minion Blast,0,False,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,65,Universal Studios Florida,Race Through New York Starring Jimmy Fallon,0,False,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,65,Universal Studios Florida,Revenge of the Mummy,20,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,65,Universal Studios Florida,Revenge of the Mummy™ Single Rider,0,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,65,Universal Studios Florida,TRANSFORMERS™: The Ride-3D,5,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,65,Universal Studios Florida,Harry Potter and the Escape from Gringotts™,15,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,65,Universal Studios Florida,Harry Potter and the Escape from Gringotts™ Single Rider,0,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,65,Universal Studios Florida,Hogwarts Express™ - King's Cross Station,0,False,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,65,Universal Studios Florida,Hogwarts™ Express - First Train,0,False,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,65,Universal Studios Florida,Hogwarts™ Express - Last Train,0,False,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,65,Universal Studios Florida,Ollivanders™ Experience in Diagon Alley™,5,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,65,Universal Studios Florida,Kang & Kodos' Twirl 'n' Hurl,0,False,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,65,Universal Studios Florida,MEN IN BLACK™ Alien Attack!,10,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,65,Universal Studios Florida,MEN IN BLACK™ Alien Attack!™ Single Rider,0,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,65,Universal Studios Florida,The Simpsons Ride™,0,False,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,65,Universal Studios Florida,Cybergoria,45,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,65,Universal Studios Florida,Evil Dead Burn,30,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,65,Universal Studios Florida,H.R. Bloodengutz Presents: A Halloween Fright-Tacular!,40,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,65,Universal Studios Florida,Hellraiser,5,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,65,Universal Studios Florida,INVASION: Alien Abduction,30,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,65,Universal Studios Florida,Jack & Oddfellow: Chaos & Control,25,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,65,Universal Studios Florida,MADLANDS: Caged Cannibals,45,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,65,Universal Studios Florida,Ozzy Osbourne: Prince of Darkness,70,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,65,Universal Studios Florida,Sinners,80,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,65,Universal Studios Florida,Stranger Things 5,40,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,64,Islands of Adventure,Camp Jurassic™,0,False,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,64,Islands of Adventure,Jurassic Park Discovery Center,0,False,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,64,Islands of Adventure,Jurassic Park River Adventure,0,False,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,64,Islands of Adventure,Jurassic World VelociCoaster,60,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,64,Islands of Adventure,Pteranodon Flyers,60,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,64,Islands of Adventure,Skull Island: Reign of Kong,15,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,64,Islands of Adventure,Doctor Doom's Fearfall®,10,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,64,Islands of Adventure,Doctor Doom's Fearfall® Single Rider,0,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,64,Islands of Adventure,Storm Force Accelatron®,15,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,64,Islands of Adventure,The Amazing Adventures of Spider-Man®,25,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,64,Islands of Adventure,The Incredible Hulk Coaster®,25,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,64,Islands of Adventure,The Incredible Hulk Coaster® Single Rider,0,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,64,Islands of Adventure,Caro-Seuss-el™,10,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,64,Islands of Adventure,If I Ran The Zoo™,0,False,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,64,Islands of Adventure,"One Fish, Two Fish, Red Fish, Blue Fish™",10,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,64,Islands of Adventure,The Cat in The Hat™,25,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,64,Islands of Adventure,The High in the Sky Seuss Trolley Train Ride!™,25,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,64,Islands of Adventure,Flight of the Hippogriff™,60,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,64,Islands of Adventure,Hagrid's Magical Creatures Motorbike Adventure™,90,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,64,Islands of Adventure,Hagrid's Magical Creatures Motorbike Adventure™ Single Rider,0,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,64,Islands of Adventure,Harry Potter and the Forbidden Journey™,20,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,64,Islands of Adventure,Harry Potter and the Forbidden Journey™ Single Rider,0,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,64,Islands of Adventure,Hogwarts Express™ - Hogsmeade™ Station,0,False,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,64,Islands of Adventure,Ollivanders™ Experience in Hogsmeade™,15,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,64,Islands of Adventure,Dudley Do-Right's Ripsaw Falls®,15,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,64,Islands of Adventure,"Me Ship, The Olive®",0,False,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,64,Islands of Adventure,Popeye & Bluto's Bilge-Rat Barges®,0,False,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,334,Epic Universe,Constellation Carousel,25,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,334,Epic Universe,Stardust Racers,0,False,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,334,Epic Universe,Curse of the Werewolf,55,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,334,Epic Universe,Curse of the Werewolf Single Rider,0,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,334,Epic Universe,Monsters Unchained: The Frankenstein Experiment,10,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,334,Epic Universe,Dragon Racer's Rally,60,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,334,Epic Universe,Fyre Drill,5,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,334,Epic Universe,Hiccup's Wing Gliders,0,False,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,334,Epic Universe,Meet Toothless and Friends,45,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,334,Epic Universe,Bowser Jr. Challenge,5,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,334,Epic Universe,Mario Kart™: Bowser's Challenge,40,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,334,Epic Universe,Mario Kart™: Bowser's Challenge Single Rider,0,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,334,Epic Universe,Mine-Cart Madness™,60,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,334,Epic Universe,Mine-Cart Madness™ Single Rider,0,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,334,Epic Universe,Yoshi's Adventure™,20,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,334,Epic Universe,Harry Potter and the Battle at the Ministry™,80,True,71.3,9.0,1,2026-10-18T22:30
+2026-10-18 18:35:32,334,Epic Universe,Harry Potter and the Battle at the Ministry™ Single Rider,0,True,71.3,9.0,1,2026-10-18T22:30
